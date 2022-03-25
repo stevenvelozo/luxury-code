@@ -35,7 +35,7 @@ EOABORT
   )"
 fi
 
-ECHO "...installing your luxury code!"
+echo "...installing your luxury code!"
 
 curl -s "https://raw.githubusercontent.com/stevenvelozo/luxury-code/HEAD/dist/luxury-code.zip" | bsdtar -xf-
 
