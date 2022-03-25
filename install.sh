@@ -22,7 +22,7 @@ then
   abort "$(
     cat <<EOABORT
 You must install curl before using your code in Luxury. See:
-  ${tty_underline}https://github.com/stevenvelozo/luxury-code${tty_reset}
+  https://github.com/stevenvelozo/luxury-code
 EOABORT
   )"
 elif ! command -v bsdtar >/dev/null
@@ -30,7 +30,7 @@ then
   abort "$(
     cat <<EOABORT
 You must install bsdtar before using your code in Luxury. See:
-  ${tty_underline}https://github.com/stevenvelozo/luxury-code${tty_reset}
+  https://github.com/stevenvelozo/luxury-code
 EOABORT
   )"
 fi
