@@ -9,13 +9,13 @@ RUN echo "...installing debian dependencies..."
 RUN sudo apt update
 RUN sudo apt install vim curl tmux -y
 
-RUN echo "Building RETOLD development image..."
+RUN echo "Building development image..."
 
 
 RUN echo "...mapping library specific volumes..."
-# Volume mappings for RETOLD:Foxhound library
-VOLUME /home/coder/foxhound
-# VOLUME /home/coder/foxhound/node_modules
+# Volume mappings for code
+VOLUME /home/coder/YOURLIBRARYNAMEHERE
+# VOLUME /home/coder/YOURLIBRARYNAMEHERE/node_modules
 
 SHELL ["/bin/bash", "-c"]
 USER coder
@@ -29,4 +29,4 @@ RUN echo "...installing node version 14 as the default..."
 RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm install 14
 RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm alias default 14
 
-WORKDIR /home/coder/foxhound
+WORKDIR /home/coder/YOURLIBRARYNAMEHERE

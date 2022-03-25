@@ -23,8 +23,7 @@ RUN ( sudo mysqld_safe --skip-grant-tables --skip-networking & ) && sleep 5 &&  
 # RUN sudo sysv-rc-conf --level 0123456S mariadb on
 
 # Import the initial database
-COPY ./api/model/sql_create/BookStore-CreateDatabase.mysql.sql /home/coder/MySQL-Create-Databases.sql
-RUN sudo service mariadb restart && sleep 5 && mysql -u root -p"123456789" -e "CREATE DATABASE bookstore;"
+RUN sudo service mariadb restart && sleep 5 && mysql -u root -p"123456789" -e "CREATE DATABASE YOURDATABASENAMEHERE;"
 
 SHELL ["/bin/bash", "-c"]
 USER coder
@@ -33,10 +32,9 @@ USER coder
 # COPY ./.config/.default_home/ /home/coder/
 
 RUN echo "...mapping library specific volumes..."
-# Volume mappings for RETOLD:Bookstore example
-VOLUME /home/coder/retold-example_bookstore
-# VOLUME /home/coder/retold-example_bookstore/node_modules
-RUN sudo service mariadb restart && sleep 5 && mysql -u root -p"123456789" bookstore < /home/coder/MySQL-Create-Databases.sql
+# Volume mappings for code
+VOLUME /home/coder/YOURLIBRARYNAMEHERE
+# VOLUME /home/coder/YOURLIBRARYNAMEHERE/node_modules
 
 RUN echo "...installing node version manager..."
 # Because there is a .bashrc chicken/egg problem, we will create one here to simulate logging in.  This is not great.
@@ -47,6 +45,6 @@ RUN echo "...installing node version 14 as the default..."
 RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm install 14
 RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm alias default 14
 
-WORKDIR /home/coder/retold-example_bookstore
+WORKDIR /home/coder/YOURLIBRARYNAMEHERE
 
 ENTRYPOINT ["/usr/bin/MySQL-Laden-Entry.sh"]
