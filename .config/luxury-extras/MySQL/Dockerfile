@@ -17,6 +17,7 @@ RUN echo "...configuring mariadb (mysql) server..."
 RUN sudo sed -i "s|bind-address|#bind-address|g" /etc/mysql/mariadb.conf.d/50-server.cnf
 ADD ./.config/luxury-extras/MySQL/MySQL-Security.sql /home/coder/MySQL-Configure-Security.sql
 ADD ./.config/luxury-extras/MySQL/MySQL-Laden-Entry.sh /usr/bin/MySQL-Laden-Entry.sh
+RUN sudo chmod +x /usr/bin/MySQL-Laden-Entry.sh
 RUN ( sudo mysqld_safe --skip-grant-tables --skip-networking & ) && sleep 5 &&  mysql -u root < /home/coder/MySQL-Configure-Security.sql
 
 # Enable MariaDB even without systemd
