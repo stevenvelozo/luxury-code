@@ -41,7 +41,7 @@ curl -s "https://raw.githubusercontent.com/stevenvelozo/luxury-code/HEAD/dist/lu
 
 
 echo "...now you can copy the Dockerfile from the folder and customize it..."
-echo "   cp ./.config/luxury-extras/Dockerfile ./"
+echo "   cp ./.config/luxury-extras/Dockerfile_LUXURYCode ./"
 
 echo "...if you want good vscode integration for debugging, copy in the other files..."
 echo "   cp -R ./.config/luxury-extras/.vscode ./"
