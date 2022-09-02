@@ -1,0 +1,24 @@
+{
+  "name": "luxury-code",
+  "version": "1.0.0",
+  "description": "Coding Ergonomics with LUXURY",
+  "main": "debug/Harness.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenvelozo/luxury-code.git"
+  },
+  "keywords": [
+    "code",
+    "ide",
+    "ergonomics"
+  ],
+  "author": "steven velozo <steven@velozo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevenvelozo/luxury-code/issues"
+  },
+  "homepage": "https://github.com/stevenvelozo/luxury-code#readme"
+}
