@@ -1,29 +1,31 @@
 # Questions
 
-. What would you like to call your luxury workspace? my_cool_software
-. What would you like the default password for the code editor to be? 123456789
-. What would you like the repository prefix for your docker images and containers to be? luxury
-. What port would you like to expose the code editor on? 12345
-. Would you like the code editor limited to the local device (explicitly mapping the exposed docker port to 127.0.0.1)? Y
-. Would you like me to generate a Dockerfile? Y
-    . What would you like the Dockerfile to be called? Dockerfile_LUXURY
-    . Would you like to run Stricture on a folder/file? N
-        . Which file? ./Model.ddl
-    . Would you like MySQL in the Docker Environment? N
-        . Would you like to expose the MySQL port? Y
-        . What port would you like to expose MySQL on? 3306
-        . What would you like the default mysql root password to be? 123456789
-        . What would you like the database name to be? luxury_database
-        . Would you like to execute a SQL database population script on container creation (the database is created automatically)? N
-        . Which script would you like to run? ./Database-Initialization.sql
-    . Would you like add-ons to be installed by default to Visual Studio Code? Y
-        . hbenl.vscode-mocha-test-adapter (binding for mocha tests to the test explorer)? Y
-        . hbenl.test-adapter-converter (mocha test suite conversion)? Y
-        . hbenl.vscode-test-explorer (tree view for visualizing and executing tests)? Y
-        . ritwickdey.LiveServer (static html web server)? Y
-        . daylerees.rainglow (tons of color themes like the freshest theme: freshcut)? Y
-        . oderwat.indent-rainbow (rainbow-colored indent levels)? Y
-. Would you like me to edit the package.json? Y
-    . Docker build statements? Y
-    . Mocha tdd test run statements? Y
-    . Mocha IDE test configurations? Y
+This is just a quick UI requirement for the expected question architecture to install Luxury Code.
+
+* What would you like to call your luxury workspace? my_cool_software
+* What would you like the default password for the code editor to be? 123456789
+* What would you like the repository prefix for your docker images and containers to be? luxury
+* What port would you like to expose the code editor on? 12345
+* Would you like the code editor limited to the local device (explicitly mapping the exposed docker port to 127.0.0.1)? Y
+* Would you like me to generate a Dockerfile? Y
+    * What would you like the Dockerfile to be called? Dockerfile_LUXURY
+    * Would you like to run Stricture on a folder/file? N
+        * Which file? ./Model.ddl
+    * Would you like MySQL in the Docker Environment? N
+        * Would you like to expose the MySQL port? Y
+        * What port would you like to expose MySQL on? 3306
+        * What would you like the default mysql root password to be? 123456789
+        * What would you like the database name to be? luxury_database
+        * Would you like to execute a SQL database population script on container creation (the database is created automatically)? N
+            * Which script would you like to run? ./Database-Initialization.sql
+    * Would you like add-ons to be installed by default to Visual Studio Code? Y
+        * hbenl.vscode-mocha-test-adapter (binding for mocha tests to the test explorer)? Y
+        * hbenl.test-adapter-converter (mocha test suite conversion)? Y
+        * hbenl.vscode-test-explorer (tree view for visualizing and executing tests)? Y
+        * ritwickdey.LiveServer (static html web server)? Y
+        * daylerees.rainglow (tons of color themes like the freshest theme: freshcut)? Y
+        * oderwat.indent-rainbow (rainbow-colored indent levels)? Y
+* Would you like me to edit the package.json? Y
+    * Docker build statements? Y
+    * Mocha tdd test run statements? Y
+    * Mocha IDE test configurations? Y
